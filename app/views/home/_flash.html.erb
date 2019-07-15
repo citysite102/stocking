@@ -1,0 +1,14 @@
+
+<br/>
+<!-- Flash 哪裡來的啊？ -->
+<% flash.each do |name, msg| %>
+	<div class="alert alert-warning alert-dismissable" role="alert">
+		<button class="close" data-dismiss="alert">
+			<small>
+				<sup>x</sup>
+			</small>
+		</button>
+		<!-- 在 Rails 中 Tag 就是用來生成各種類型的 Html Tag -->
+		<%= content_tag(:div, msg) %>
+	</div>
+<% end %>
